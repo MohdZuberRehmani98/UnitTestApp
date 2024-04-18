@@ -11,7 +11,7 @@ import SwiftUI
 struct UnitTestAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(isPremium: Bool.random())
         }
     }
 }

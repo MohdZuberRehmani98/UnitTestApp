@@ -14,6 +14,11 @@
 		36079F432BB2CAAF00ED40B3 /* UnitTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36079F422BB2CAAF00ED40B3 /* UnitTestAppTests.swift */; };
 		36079F4D2BB2CAAF00ED40B3 /* UnitTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36079F4C2BB2CAAF00ED40B3 /* UnitTestAppUITests.swift */; };
 		36079F4F2BB2CAAF00ED40B3 /* UnitTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36079F4E2BB2CAAF00ED40B3 /* UnitTestAppUITestsLaunchTests.swift */; };
+		36079F602BB2CAFB00ED40B3 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36079F5F2BB2CAFB00ED40B3 /* ContentViewModel.swift */; };
+		36079F622BB2CC7600ED40B3 /* ContentViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36079F612BB2CC7600ED40B3 /* ContentViewModel_Tests.swift */; };
+		362050EE2BBBDB5C00DDA769 /* NewMockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362050ED2BBBDB5C00DDA769 /* NewMockDataService.swift */; };
+		362050F22BBBE5A100DDA769 /* NewMockDataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362050F12BBBE5A100DDA769 /* NewMockDataService_Tests.swift */; };
+		36EDB88D2BBD84DE008B9DB0 /* ContentView_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EDB88C2BBD84DE008B9DB0 /* ContentView_UITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		36079F482BB2CAAF00ED40B3 /* UnitTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36079F4C2BB2CAAF00ED40B3 /* UnitTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestAppUITests.swift; sourceTree = "<group>"; };
 		36079F4E2BB2CAAF00ED40B3 /* UnitTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36079F5F2BB2CAFB00ED40B3 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		36079F612BB2CC7600ED40B3 /* ContentViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel_Tests.swift; sourceTree = "<group>"; };
+		362050ED2BBBDB5C00DDA769 /* NewMockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService.swift; sourceTree = "<group>"; };
+		362050F12BBBE5A100DDA769 /* NewMockDataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService_Tests.swift; sourceTree = "<group>"; };
+		36EDB88C2BBD84DE008B9DB0 /* ContentView_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_UITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				36079F312BB2CAAD00ED40B3 /* UnitTestAppApp.swift */,
-				36079F332BB2CAAD00ED40B3 /* ContentView.swift */,
+				36079F5B2BB2CACB00ED40B3 /* Modules */,
 				36079F352BB2CAAF00ED40B3 /* Assets.xcassets */,
 				36079F372BB2CAAF00ED40B3 /* Preview Content */,
 			);
@@ -114,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				36079F422BB2CAAF00ED40B3 /* UnitTestAppTests.swift */,
+				36079F612BB2CC7600ED40B3 /* ContentViewModel_Tests.swift */,
+				362050F12BBBE5A100DDA769 /* NewMockDataService_Tests.swift */,
 			);
 			path = UnitTestAppTests;
 			sourceTree = "<group>";
@@ -123,8 +135,51 @@
 			children = (
 				36079F4C2BB2CAAF00ED40B3 /* UnitTestAppUITests.swift */,
 				36079F4E2BB2CAAF00ED40B3 /* UnitTestAppUITestsLaunchTests.swift */,
+				36EDB88C2BBD84DE008B9DB0 /* ContentView_UITests.swift */,
 			);
 			path = UnitTestAppUITests;
+			sourceTree = "<group>";
+		};
+		36079F5B2BB2CACB00ED40B3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				362050EC2BBBDB4800DDA769 /* Service */,
+				36079F5C2BB2CAD600ED40B3 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		36079F5C2BB2CAD600ED40B3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				36079F5E2BB2CAE700ED40B3 /* ViewModel */,
+				36079F5D2BB2CADE00ED40B3 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		36079F5D2BB2CADE00ED40B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36079F332BB2CAAD00ED40B3 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36079F5E2BB2CAE700ED40B3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36079F5F2BB2CAFB00ED40B3 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		362050EC2BBBDB4800DDA769 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				362050ED2BBBDB5C00DDA769 /* NewMockDataService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 36079F252BB2CAAD00ED40B3;
+			packageReferences = (
+				36B673932BD138C00005BD7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 36079F2F2BB2CAAD00ED40B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				36079F342BB2CAAD00ED40B3 /* ContentView.swift in Sources */,
+				36079F602BB2CAFB00ED40B3 /* ContentViewModel.swift in Sources */,
+				362050EE2BBBDB5C00DDA769 /* NewMockDataService.swift in Sources */,
 				36079F322BB2CAAD00ED40B3 /* UnitTestAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36079F622BB2CC7600ED40B3 /* ContentViewModel_Tests.swift in Sources */,
 				36079F432BB2CAAF00ED40B3 /* UnitTestAppTests.swift in Sources */,
+				362050F22BBBE5A100DDA769 /* NewMockDataService_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36EDB88D2BBD84DE008B9DB0 /* ContentView_UITests.swift in Sources */,
 				36079F4F2BB2CAAF00ED40B3 /* UnitTestAppUITestsLaunchTests.swift in Sources */,
 				36079F4D2BB2CAAF00ED40B3 /* UnitTestAppUITests.swift in Sources */,
 			);
@@ -422,7 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UnitTestApp/Preview Content\"";
-				DEVELOPMENT_TEAM = U7HVHRUHK9;
+				DEVELOPMENT_TEAM = A34XSTF567;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -451,7 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UnitTestApp/Preview Content\"";
-				DEVELOPMENT_TEAM = U7HVHRUHK9;
+				DEVELOPMENT_TEAM = A34XSTF567;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -588,6 +651,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36B673932BD138C00005BD7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 36079F262BB2CAAD00ED40B3 /* Project object */;
 }
