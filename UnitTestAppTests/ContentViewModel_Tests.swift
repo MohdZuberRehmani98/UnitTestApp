@@ -35,7 +35,7 @@ final class ContentViewModel_Tests: XCTestCase {
         let vm = ContentViewModel(isPremium: userIsPremium)
         
         // Then
-        XCTAssertTrue(vm.isPremium)
+        XCTAssertTrue(!vm.isPremium)
     }
     
     func test_ContentViewModel_isPremium_shouldBeFalse() {
